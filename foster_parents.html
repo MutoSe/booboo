@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>里親面談ご予約フォーム｜BooBoo</title>
+    <link rel="icon" href="https://mutose.github.io/booboo/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N&family=Zen+Kurenaido&family=Zen+Maru+Gothic&family=Zen+Old+Mincho&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="top_button"><a href="order.html"><img src="https://mutose.github.io/booboo/top_button.png" alt="画面トップへ戻る"></a></div>
+    <div class="logo_container">
+        <h1><a href="index.html"><img src="https://mutose.github.io/booboo/logo.png" alt="booboo株式会社"></a></h1>
+        <ul class="header_sns_container">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LINE</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">YouTube</a></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a href="dog_breed.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_dog_breed.png" alt=""></div>短頭種の仲間たち
+                    </a></li>
+                <li><a href="library.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_library.png" alt=""></div>お役立ち情報
+                    </a></li>
+                <li><a href="event.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_event.png" alt=""></div>イベント
+                    </a></li>
+                <li><a href="rescue_dog.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_rescue_dog.png" alt=""></div>保護活動
+                    </a></li>
+                <li><a href="photo_gallery.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_photo_gallery.png" alt=""></div>フォトギャラリー
+                    </a></li>
+                <li><a href="contact.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_contact.png" alt=""></div>お問い合わせ
+                    </a></li>
+                <li><a href="about.html">
+                        <div><img src="https://mutose.github.io/booboo/icon_about.png" alt=""></div>BooBooについて
+                    </a></li>
+            </ul>
+        </nav>
+        <div class="btn-trigger" id="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+
+    <main>
+        <h2 class="icon"><img src="https://mutose.github.io/booboo/icon_foster_parents.png" alt="">面談ご予約</h2>
+        <p>まずはスタッフとの面談と、わんこと実際に顔合わせをしていただきます。<br>
+            ご希望日をお送りいただいた後、ご登録のメールアドレス宛に面談日をご連絡いたします。</p>
+
+        <div class="foster_parents_form">
+            <form action="example.php" method="post" name="contact-form">
+                <dl>
+                    <dt>お名前</dt>
+                    <dd>
+                        <label for="first_name">姓</label><input type="text" id="first_name" required>
+                        <label for="last_name">名</label><input type="text" id="last_name" required>
+                    </dd>
+
+                    <dt>ふりがな</dt>
+                    <dd>
+                        <label for="first_name_furigana">姓</label><input type="text" id="first_name_furigana" required>
+                        <label for="last_name_furigana">名</label><input type="text" id="last_name_furigana" required>
+                    </dd>
+
+                    <dt>面談ご希望日時（候補日１）</dt>
+                    <div class="requested_date_container">
+                        <dd><input type="date" required></dd>
+                        <dd><select name="time">
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                            </select></dd>
+                    </div>
+
+                    <dt>面談ご希望日時（候補日２）</dt>
+                    <div class="requested_date_container">
+                        <dd><input type="date" required></dd>
+                        <dd><select name="time">
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                            </select></dd>
+                    </div>
+
+                    <dt>お電話番号</dt>
+                    <dd><input type="tel" required></dd>
+
+
+                    <dt>メールアドレス</dt>
+                    <dd><input type="email" required></dd>
+
+                    <dt>里親にお迎えしたい子のお名前・犬種・お迎えしたい理由</dt>
+                    <dd>
+                        <textarea name="dog_name" required placeholder="名前：さくらちゃん、犬種：フレンチブルドッグ、理由：－－－－－－"></textarea>
+                    </dd>
+
+                    <dt>ご要望</dt>
+                    <dd>
+                        <textarea name="message" required placeholder="そのほかご要望などございましたら、ご入力ください。"></textarea>
+                    </dd>
+
+                </dl>
+
+                <div class="foster_parents_button">
+                    <input type="submit" value="確認画面へ">
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div><img src="https://mutose.github.io/booboo/logo.png" alt="ロゴ"></div>
+        <div class="mobile_sns_container">
+            <div class="footer_container">
+                <div class="footer_item">
+                    <h4><a href="dog_breed.html">短頭種の仲間たち</a></h4>
+                    <ul>
+                        <li><a href="dog_breed.html#pug">パグ</a></li>
+                        <li><a href="dog_breed.html#frenchbulldog">フレンチブルドッグ</a></li>
+                        <li><a href="dog_breed.html#bostonterrier">ボストンテリア</a></li>
+                        <li><a href="dog_breed.html#shihtzu">シーズー</a></li>
+                        <li><a href="dog_breed.html#bulldog">ブルドッグ</a></li>
+                        <li><a href="dog_breed.html#boxer">ボクサー</a></li>
+                        <li><a href="dog_breed.html#other">ほかの仲間たち</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <h4><a href="event.html">イベント情報</a></h4>
+                    <ul>
+                        <li><a href="event.html#now">開催中</a></li>
+                        <li><a href="event.html#future">開催予定</a></li>
+                        <li><a href="event.html#past">過去のイベント</a></li>
+                </div>
+
+                <div class="footer_item">
+                    <h4><a href="library.html">お役立ち情報</a></h4>
+                    <ul>
+                        <li><a href="library.html#preparation">お迎えする前に</a></li>
+                        <li><a href="library.html#puppy">子犬</a></li>
+                        <li><a href="library.html#meal">食事</a></li>
+                        <li><a href="library.html#care">お手入れ</a></li>
+                        <li><a href="library.html#health">健康管理</a></li>
+                        <li><a href="library.html#other">そのほか</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="footer_item">
+                    <h4><a href="rescue_dog.html">保護犬活動</a></h4>
+                    <ul>
+                        <li><a href="rescue_dog.html#booboo_rescue">BooBooレスキュー</a></li>
+                        <li><a href="rescue_dog.html#rescue_dogs">里親募集中の保護っ子たち</a></li>
+                        <li><a href="rescue_dog.html#support_goods">保護犬支援グッズ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_item">
+                    <h4><a href="about.html">BooBooについて</a></h4>
+                    <h4><a href="company.html">会社概要</a></h4>
+                    <h4><a href="photo_gallery.html">フォトギャラリー</a></h4>
+                    <h4><a href="qa.html">よくあるご質問</a></h4>
+                    <h4><a href="contact.html">お問い合わせ</a></h4>
+                </div>
+
+
+            </div>
+
+            <ul class="mobile_sns_item">
+                <li><a href="#"><img src="https://mutose.github.io/booboo/sns_instagram.png" alt="インスタグラム"></a></li>
+                <li><a href="#"><img src="https://mutose.github.io/booboo/sns_line.png" alt="ライン"></a></li>
+                <li><a href="#"><img src="https://mutose.github.io/booboo/sns_facebook.png" alt="フェイスブック"></a></li>
+                <li><a href="#"><img src="https://mutose.github.io/booboo/sns_youtube.png" alt="ユーチューブ"></a></li>
+            </ul>
+        </div>
+        <p class="copy"><small>&copy;2025 BooBoo</small></p>
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/humburger_menu.js"></script>
+</body>
+
+</html>
