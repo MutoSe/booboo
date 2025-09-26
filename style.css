@@ -1,0 +1,2057 @@
+@charset "UTF-8";
+
+
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    background-color: #fdf8ef;
+}
+
+main {
+    width: 980px;
+    margin: 0 auto;
+}
+
+
+/*グーグルフォント(全体)*/
+.zen-maru-gothic-regular {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* ロゴ */
+h1 {
+    margin-left: 30px;
+    padding: 5px;
+}
+
+h1 img {
+    width: 150px;
+    height: 50px;
+}
+
+/* タイトル */
+h2 {
+    margin: 60px 0 20px;
+    text-transform: uppercase;
+}
+
+
+
+
+/* リンク基本 */
+a:link,
+a:visited {
+    color: #474747;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+
+/* サブタイトルリストマーク */
+
+.listmark h3 {
+    padding: 150px;
+    margin: -150px;
+    font-size: 1.4rem;
+}
+
+.listmark h3::before {
+    content: url(https://mutose.github.io/booboo/listmark.png);
+    margin-right: 10px;
+}
+
+/* トップへ戻るボタン */
+
+.top_button img {
+    display: block;
+    margin: 15px auto 0;
+}
+
+.top_button a {
+    background-color: #7cc48e;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+
+/* ヘッダー */
+
+header {
+    background-color: #fdf8ef;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.logo_container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(241, 237, 95, 0.1);
+}
+
+.header_sns_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.header_sns_container li {
+    list-style-image: url(https://mutose.github.io/booboo/listmark.png);
+    margin-left: 50px;
+}
+
+
+.header_sns_container a:hover,
+.nav a:hover {
+    opacity: 0.5;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* アイコン画像関連 */
+.nav img,
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon img {
+    margin-right: 10px;
+}
+
+
+
+
+
+/* index.html */
+/* キービジュアル */
+.keyvisual {
+    height: 700px;
+    position: relative;
+    z-index: 2;
+    background-color: #fdf8ef;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: image-switch-animation 16s infinite;
+}
+
+
+.keyvisual01 {
+    background-image: url(https://mutose.github.io/booboo/keyvisual01.jpg);
+}
+
+.keyvisual02 {
+    background-image: url(https://mutose.github.io/booboo/keyvisual02.jpg);
+}
+
+.keyvisual03 {
+    background-image: url(https://mutose.github.io/booboo/keyvisual03.jpg);
+
+}
+
+.keyvisual04 {
+    background-image: url(https://mutose.github.io/booboo/keyvisual04.jpg);
+
+}
+
+@keyframes image-switch-animation {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.image:nth-of-type(1) {
+    animation-delay: 0s;
+}
+
+.image:nth-of-type(2) {
+    animation-delay: 4s;
+}
+
+.image:nth-of-type(3) {
+    animation-delay: 8s;
+}
+
+.image:nth-of-type(4) {
+    animation-delay: 12s;
+}
+
+
+/* ピックアップ */
+.pickup_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pickup_container h3,
+.pickup_bg p:first-of-type {
+    text-align: center;
+}
+
+.pickup_bg {
+    width: 450px;
+}
+
+.pickup_bg p {
+    margin-left: 20px;
+}
+
+/* 日付部分だけ背景色つける場合 */
+/* .pickup_bg p:first-child {
+    padding: 10px;
+    background-color: rgba(241, 237, 95, 0.7);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+
+} */
+
+.pickup_container article:last-child {
+    position: relative;
+}
+
+.pickup_dog img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 450px;
+    top: 150px;
+}
+
+/* おすすめ記事 */
+.best_library_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.best_library_container img {
+    width: 300px;
+    height: 200px;
+}
+
+.library_button:link,
+.library_button:visited {
+    background-color: #7cc48e;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    padding: 10px 30px;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 20px;
+}
+
+.library_button:hover {
+    border: 2px solid #7cc48e;
+    color: #474747;
+    background-color: #fdf8ef;
+    opacity: 1;
+}
+
+
+.best_library_container article:nth-child(2) {
+    position: relative;
+}
+
+.best_library_dog img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -99px;
+    left: 100px;
+}
+
+/* SNS */
+
+.sns_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns_container img {
+    width: 450px;
+    height: 150px;
+}
+
+/* お知らせ */
+
+.news_container {
+    margin-left: 20px;
+    height: 240px;
+    overflow-y: hidden;
+}
+
+.news_container a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.news_container dt,
+.news_container dd {
+    line-height: 4;
+    font-size: 1.2rem;
+
+}
+
+.news_container dd {
+    margin-left: 180px;
+}
+
+.news_container dt {
+    float: left;
+}
+
+.news_container dt::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.news_event_container {
+    position: relative;
+}
+
+.news_event_container dt::after {
+    content: "イベント";
+    background-color: rgba(241, 237, 95, 0.5);
+    position: absolute;
+    top: 15px;
+    left: 90px;
+
+}
+
+.news_appreciate_container {
+    position: relative;
+
+
+}
+
+.news_appreciate_container dt::after {
+    content: "開催お礼";
+    background-color: rgba(124, 196, 142, 0.5);
+    position: absolute;
+    top: 15px;
+    left: 90px;
+
+}
+
+.news_goods_container {
+    position: relative;
+}
+
+.news_goods_container dt::after {
+    content: "新作グッズ";
+    background-color: rgba(124, 124, 193, 0.5);
+    position: absolute;
+    top: 15px;
+    left: 90px;
+}
+
+
+
+
+/* お知らせ一覧 */
+
+.newslist {
+    height: 100%;
+    overflow-y: visible;
+}
+
+.newslist dd {
+    margin-bottom: 50px;
+}
+
+
+.news_button:link,
+.news_button:visited {
+    background-color: #7cc48e;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    padding: 10px 30px;
+    letter-spacing: 0.1em;
+    display: block;
+    margin: 20px 0 100px;
+}
+
+.news_button:hover {
+    border: 2px solid #7cc48e;
+    color: #474747;
+    background-color: #fdf8ef;
+    opacity: 1;
+}
+
+/*右端から無限ループ*/
+@keyframes infinity-scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.scroll_infinity {
+    display: flex;
+    overflow: hidden;
+}
+
+.scroll_infinity ul {
+    display: flex;
+    flex-shrink: 0;
+    animation: infinity-scroll-left 50s infinite linear 0.5s both;
+    padding: 0;
+    margin: 0;
+}
+
+.scroll_infinity li {
+    padding: 0;
+    width: calc(100% / 7);
+}
+
+.scroll_infinity_size img {
+    width: 300px;
+    height: 160px;
+}
+
+
+/* dog_breed.html */
+/* 短頭種の仲間たち */
+
+.dog_breed_list {
+    display: flex;
+}
+
+.dog_breed_list li {
+    list-style-image: url(https://mutose.github.io/booboo/listmark.png);
+    margin-right: 40px;
+}
+
+.dog_breed {
+    margin-top: 50px;
+}
+
+.dog_breed img {
+    margin-top: 20px;
+
+}
+
+.dog_breed img:hover {
+    animation: rotate 3s infinite 1s;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dog_breed_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dog_breed_container table {
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 30px;
+    margin-top: 20px;
+}
+
+
+.dog_breed_container th {
+    width: 140px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.dog_breed_container th::before {
+    content: "";
+    border-left: 10px solid #7cc48e;
+    margin-right: 10px;
+}
+
+.last_container th {
+    width: 230px;
+}
+
+.last_container th::before {
+    content: "";
+    border-left: 10px solid #f1ed5f;
+    margin-right: 10px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* library.html */
+/* お役立ち情報 */
+
+
+.library ul {
+    display: flex;
+    justify-content: left;
+    margin: 20px 0 50px 40px;
+}
+
+.library li {
+    list-style-image: url(https://mutose.github.io/booboo/listmark.png);
+    margin-right: 40px;
+}
+
+
+.library_container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    border-bottom: 2px dotted #7cc48e;
+    padding-bottom: 20px;
+}
+
+.library_container img {
+    width: 300px;
+    height: 200px;
+}
+
+.library_container:last-child {
+    border: none;
+    margin-bottom: 70px;
+}
+
+.library_container dl {
+    margin: 40px 0 0 30px;
+
+
+}
+
+.library_container dt {
+    font-size: 1.5rem;
+}
+
+.library_container dd {
+    margin-top: 10px;
+}
+
+/* お役立ち情報各記事 */
+
+.library_article h3 {
+    margin: 40px 0 5px 0;
+}
+
+
+.library_article p {
+    margin-left: 25px;
+}
+
+/* お迎え前のリストマーク */
+.preparation h3::before {
+    content: url(https://mutose.github.io/booboo/listmark_preparation.png);
+    margin-right: 10px;
+}
+
+.preparation p:first-of-type {
+    border-bottom: 2px dotted #ed629a;
+    padding-bottom: 20px;
+}
+
+
+/* 子犬のリストマーク */
+.puppy h3::before {
+    content: url(https://mutose.github.io/booboo/listmark_puppy.png);
+    margin-right: 10px;
+}
+
+.puppy p:first-of-type {
+    border-bottom: 2px dotted #edd262;
+    padding-bottom: 20px;
+}
+
+/* 食事のリストマーク */
+.meal h3::before {
+    content: url(https://mutose.github.io/booboo/listmark_meal.png);
+    margin-right: 10px;
+}
+
+.meal p:first-of-type {
+    border-bottom: 2px dotted #e8646e;
+    padding-bottom: 20px;
+}
+
+/* お手入れのリストマーク */
+.care h3::before {
+    content: url(https://mutose.github.io/booboo/listmark_care.png);
+    margin-right: 10px;
+}
+
+.care p:first-of-type {
+    border-bottom: 2px dotted #63ea93;
+    padding-bottom: 20px;
+}
+
+/* 健康管理のリストマーク */
+.health h3::before {
+    content: url(https://mutose.github.io/booboo/listmark_health.png);
+    margin-right: 10px;
+}
+
+.health p:first-of-type {
+    border-bottom: 2px dotted #6085ef;
+    padding-bottom: 20px;
+}
+
+/* そのほかのリストマーク */
+.other h3::before {
+    content: url(https://mutose.github.io/booboo/listmark_other.png);
+    margin-right: 10px;
+}
+
+.other p:first-of-type {
+    border-bottom: 2px dotted #1a1a1a;
+    padding-bottom: 20px;
+}
+
+
+
+/* event.html */
+/* イベント */
+
+.event ul {
+    display: flex;
+    justify-content: left;
+    margin: 20px 0 50px 40px;
+}
+
+.event li {
+    list-style-image: url(https://mutose.github.io/booboo/listmark.png);
+    margin-right: 40px;
+}
+
+.event_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.event_container article {
+    margin: 20px 0 60px 0;
+}
+
+.event_container h4 {
+    font-size: 1.25rem;
+    margin: 8px 0 8px;
+    text-align: center;
+}
+
+.place_container {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+}
+
+.place_container p:first-child {
+    background-color: #7cc48e;
+    border-radius: 50%;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.place_container p:last-child {
+    background-color: #f1ed5f;
+    border-radius: 50%;
+    width: 110px;
+    text-align: center;
+    padding: 5px;
+}
+
+/* イベント各記事 */
+
+.event_article h2 {
+    text-align: center;
+}
+
+.event_article h3 {
+    margin: 30px 0 10px;
+}
+
+.event_article li {
+    margin-left: 40px;
+    list-style-image: url(https://mutose.github.io/booboo/listmark.png);
+}
+
+.event_article p {
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+.event_article iframe {
+    margin: 20px 0;
+}
+
+.event_date {
+    text-align: center;
+    background-color: rgba(241, 237, 95, 0.7);
+    width: 300px;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 0 auto 30px;
+}
+
+.past_photo,
+.mrmakino_photo {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.past_photo img {
+    width: 400px;
+    height: 250px;
+}
+
+.entry_wrap {
+    position: relative;
+}
+
+.entry_button_dog img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 450px;
+    animation: up-down 3s infinite 0.5s;
+    z-index: -1;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(40%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.photo_entry_button a:link,
+.photo_entry_button a:visited {
+    background-color: #f1ed5f;
+    color: #474747;
+    width: 300px;
+    text-align: center;
+    padding: 10px 30px;
+    letter-spacing: 0.1em;
+    display: block;
+    margin: 20px auto 100px;
+    z-index: 1;
+}
+
+.photo_entry_button a:hover {
+    border: 2px solid #f1ed5f;
+    color: #474747;
+    background-color: #fff;
+    opacity: 1;
+}
+
+
+/* 写真撮影会フォトグラファー作品ボタン */
+.photo_work_button a {
+    margin-left: 50px;
+}
+
+
+
+/* photo_gallery.html */
+/*フォトギャラリー*/
+
+.photo_gallery {
+    width: 820px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #7cc48e;
+}
+
+.photo_gallery h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.photo_gallery_photo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.photo_gallery_photo img {
+    margin-bottom: 20px;
+    width: 400px;
+    height: auto;
+
+}
+
+/* フォトギャラリークリックで拡大表示 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    animation: modalFadeIn 0.3s;
+}
+
+.modal img {
+    max-width: 90%;
+    /* 画像の最大幅を親要素(modal)の90%に制限し、画面内に収まるようにする */
+    max-height: 100vh;
+    /* 画像の最大高さをビューポートの高さ(100vh)に制限し、画面内に収まるようにする  */
+    object-fit: contain;
+    /* 画像の比率を保持しつつ、指定された高さと幅に収める */
+}
+
+.clickable-image:hover {
+    cursor: zoom-in;
+    /* ホバー時にカーソルをズームインのアイコンに変更 */
+}
+
+.modal img:hover {
+    cursor: zoom-out;
+    /* モーダル内の画像にホバー時にカーソルをズームアウトのアイコンに変更 */
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* rescue_dog.html */
+/* 保護活動 */
+
+.booboo_rescue ul {
+    display: flex;
+    justify-content: left;
+    margin: 20px 0 50px 40px;
+}
+
+.booboo_rescue li {
+    list-style-image: url(https://mutose.github.io/booboo/listmark.png);
+    margin-right: 40px;
+}
+
+.booboo_rescue_photo {
+    position: relative;
+}
+
+.booboo_rescue_photo img {
+    transition: opacity 2s;
+}
+
+.booboo_rescue_photo:hover img:first-of-type {
+    opacity: 0;
+}
+
+.booboo_rescue_photo img:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.booboo_rescue_photo:hover img:last-of-type {
+    opacity: 1;
+}
+
+
+
+
+.booboo_rescue_discription {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.booboo_rescue_discription p {
+    padding: 20px;
+    line-height: 2;
+}
+
+
+.foster_parents_button a:link,
+.foster_parents_button a:visited,
+.order_button a:link,
+.order_button a:visited {
+    background-color: #7cc48e;
+    color: #fff;
+    width: 300px;
+    text-align: center;
+    padding: 10px 30px;
+    letter-spacing: 0.1em;
+    display: block;
+    margin: 20px 0 100px;
+}
+
+.foster_parents_button a:hover,
+.order_button a:hover {
+    border: 2px solid #7cc48e;
+    color: #474747;
+    background-color: #fdf8ef;
+    opacity: 1;
+}
+
+
+/* 里親募集の保護っ子たち */
+.rescue_dogs_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.rescue_dogs_container div {
+    margin: 20px 20px 20px 0;
+}
+
+.rescue_dogs_container p {
+    margin-left: 20px;
+}
+
+/* foster_parents.html */
+/* 里親面談予約フォーム */
+
+.foster_parents_form {
+    width: 700px;
+    border: 1px solid #f1ed5f;
+    margin: 30px auto 30px;
+    padding: 30px 40px;
+    background-color: #fff;
+}
+
+.foster_parents_form dt {
+    border-bottom: 1px solid #f1ed5f;
+    padding: 5px;
+}
+
+.foster_parents_form dt::before {
+    content: "";
+    border-left: 10px solid #f1ed5f;
+    margin-right: 10px;
+}
+
+.foster_parents_form dd {
+    margin: 10px 0 50px 20px;
+}
+
+.foster_parents_form label[for="first_name"],
+.foster_parents_form label[for="last_name"],
+.foster_parents_form label[for="first_name_furigana"],
+.foster_parents_form label[for="last_name_furigana"] {
+    margin-right: 10px;
+}
+
+.foster_parents_form input[type="text"] {
+    width: 120px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.requested_date_container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.foster_parents_form input[type="date"] {
+    width: 120px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+
+.foster_parents_form select {
+    width: 120px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.foster_parents_form input[type="tel"] {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+}
+
+.foster_parents_form input[type="email"] {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+}
+
+.foster_parents_form textarea {
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+}
+
+.foster_parents_form input[type="submit"] {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    background-color: #7cc48e;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 40px;
+}
+
+.foster_parents_form input[type="submit"]:hover {
+    border: 2px solid #7cc48e;
+    color: #474747;
+    background-color: #fff;
+    opacity: 1;
+}
+
+
+/* 支援グッズ */
+
+.support_goods h4 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.purpuse {
+    margin: 20px 20px;
+}
+
+.goods_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.goods_item {
+    margin: 30px 0 30px;
+}
+
+.goods_item li {
+    text-align: center;
+}
+
+.goods_item li:first-child {
+    font-size: 1.1rem;
+}
+
+.price {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-right: 13px;
+}
+
+.size {
+    background-color: rgba(124, 196, 142, 0.5);
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* 保護犬支援グッズクリックで入れ替わる写真 */
+/* アクティブな画像の枠線を変更 */
+.sub-img li.current img {
+    border: 2px solid red;
+    transition: border .5s;
+}
+
+/* レイアウトのためのスタイル */
+.goods_item_container {
+    margin: 5px auto 0;
+    max-width: 280px;
+}
+
+.main-img {
+    height: 280px;
+    width: 100%;
+}
+
+.main-img img {
+    height: auto;
+    width: 100%;
+}
+
+.sub-img {
+    display: flex;
+    margin-top: 10px;
+}
+
+.sub-img li {
+    margin-right: 2%;
+    width: calc(96% / 3);
+}
+
+.sub-img li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.sub-img li img {
+    border: 2px solid transparent;
+    transition: border .5s;
+}
+
+.sub-img img {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+/* order.html */
+/* ご注文フォーム */
+
+
+.order_form {
+    width: 700px;
+    border: 1px solid #f1ed5f;
+    margin: 30px auto 30px;
+    padding: 30px 40px;
+    background-color: #fff;
+}
+
+.order_form dt {
+    border-bottom: 1px solid #f1ed5f;
+    padding: 5px;
+}
+
+.order_form dt::before {
+    content: "";
+    border-left: 10px solid #f1ed5f;
+    margin-right: 10px;
+}
+
+.order_form dd {
+    margin: 10px 0 50px 20px;
+}
+
+.order_form label[for="first_name"],
+.order_form label[for="last_name"],
+.order_form label[for="first_name_furigana"],
+.order_form label[for="last_name_furigana"] {
+    margin-right: 10px;
+}
+
+.order_form input[type="text"] {
+    width: 120px;
+    height: 30px;
+    margin-right: 20px;
+    padding: 10px;
+
+}
+
+.address div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+
+.address input[type="text"] {
+    width: 200px;
+    height: 30px;
+}
+
+
+.apartment input[type="text"] {
+    width: 300px;
+}
+
+.order_form select {
+    width: 300px;
+    height: 40px;
+    margin: 0 0 10px 5px;
+    padding: 10px;
+}
+
+.order_form input[type="tel"] {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+}
+
+.order_form input[type="email"] {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+}
+
+.order_form textarea {
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+}
+
+.order_form input[type="submit"] {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    background-color: #7cc48e;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 40px;
+}
+
+.order_form input[type="submit"]:hover {
+    border: 2px solid #7cc48e;
+    color: #474747;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.order_form summary {
+    list-style: none;
+}
+
+.order_form summary::after {
+    content: "＋ご購入商品の追加";
+    display: block;
+    margin-bottom: 20px;
+}
+
+.order_form details[open] summary::after {
+    content: "－追加商品を削除";
+}
+
+
+
+/* contact.html */
+/*お問い合わせフォーム*/
+.contact_form {
+    width: 700px;
+    border: 1px solid #7cc48e;
+    margin: 30px auto 30px;
+    padding: 30px 40px;
+    background-color: #fff;
+}
+
+.contact_form dt {
+    border-bottom: 1px solid #7cc48e;
+    padding: 5px;
+}
+
+.contact_form dt::before {
+    content: "";
+    border-left: 10px solid #7cc48e;
+    margin-right: 10px;
+}
+
+.contact_form dd {
+    margin: 10px 0 50px 20px;
+}
+
+.contact_form label[for="first_name"],
+.contact_form label[for="last_name"] {
+    margin-right: 10px;
+}
+
+.contact_form input[type="text"] {
+    width: 120px;
+    height: 30px;
+    margin-right: 20px;
+    padding-left: 10px;
+}
+
+.contact_form input[type="email"] {
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.contact_form input[type="radio"] {
+    margin-left: 15px;
+}
+
+.contact_form textarea {
+    width: 600px;
+    height: 150px;
+    padding: 10px;
+}
+
+.contact_form input[type="submit"] {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    background-color: #f1ed5f;
+    color: #474747;
+    cursor: pointer;
+    padding: 10px 40px;
+}
+
+.contact_form input[type="submit"]:hover {
+    border: 2px solid #f1ed5f;
+    color: #474747;
+    background-color: #fff;
+    opacity: 1;
+}
+
+/* about.html */
+/* BooBooについて */
+.about h3 {
+    background-image: url(https://mutose.github.io/booboo/about.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 692px;
+    padding: 5% 85% 0 0;
+    font-size: 1.75rem;
+    color: #000;
+    writing-mode: vertical-rl;
+}
+
+.about p {
+    text-align: center;
+    line-height: 3;
+    margin: 20px auto 20px;
+
+}
+
+/* company.html */
+/*会社概要*/
+
+.company {
+    margin: 20px auto 0;
+}
+
+.company tr {
+    border-bottom: 0.5px solid #dcdcdc;
+}
+
+.company th,
+.company td {
+    padding: 30px;
+    text-align: left;
+}
+
+.company th {
+    font-weight: normal;
+    padding-right: 20px;
+}
+
+.map {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* qa.html */
+/* Q&A */
+.qa h3 {
+    margin-top: 50px;
+}
+
+.qa summary {
+    list-style-type: none;
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 15px 15px 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.qa01 summary {
+    background-color: rgba(241, 237, 95, 0.7);
+    color: #474747;
+}
+
+.qa02 summary {
+    background-color: rgba(124, 196, 142, 1);
+    color: #fff;
+}
+
+
+.qa p {
+    margin: 5px 0 20px 40px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.qa summary::after {
+    content: "＋";
+}
+
+.qa details[open] summary::after {
+    content: "－";
+}
+
+
+
+/* フッター */
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0 20px;
+    background-color: #f1ed5f;
+}
+
+footer img {
+    width: 255px;
+    height: 85px;
+    margin: 0 0 20px 30px;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+footer h4 {
+    margin-bottom: 10px;
+    width: 150px;
+}
+
+footer h4::before {
+    content: "▶";
+    color: #474747;
+    margin-right: 5px;
+    font-size: 0.75rem;
+}
+
+
+.footer_item li {
+    font-size: 0.85rem;
+    margin: 0 0 10px 20px;
+    width: 180px;
+
+}
+
+
+
+footer li a:hover {
+    border-left: 4px solid #7cc48e;
+    opacity: 1;
+    padding-left: 5px;
+}
+
+footer p {
+    text-align: center;
+    color: gray;
+}
+
+
+
+
+
+
+
+/* モバイル用（レスポンシブ） */
+
+@media(max-width: 800px) {
+
+    body {
+        width: 100%;
+        margin: 0 auto;
+        /* border: 1px solid red; */
+    }
+
+
+    main {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        margin: 0 auto;
+    }
+
+    /* ヘッダー */
+    .header_sns_container {
+        display: none;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    /* ハンバーガーメニューボタン */
+    .btn-trigger {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 34px;
+        height: 28px;
+        transform: translateY(0);
+        cursor: pointer;
+    }
+
+    .btn-trigger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #383838;
+        border-radius: 4px;
+    }
+
+    .btn-trigger,
+    .btn-trigger span {
+        display: inline-block;
+        transition: all .5s;
+        box-sizing: border-box;
+    }
+
+    .btn-trigger span:nth-of-type(1) {
+        top: 0;
+    }
+
+    .btn-trigger span:nth-of-type(2) {
+        top: 12px;
+    }
+
+    .btn-trigger span:nth-of-type(3) {
+        bottom: 0;
+    }
+
+    #btn.active span:nth-of-type(1) {
+        transform: translateY(12px) rotate(-45deg);
+    }
+
+    #btn.active span:nth-of-type(2) {
+        left: 50%;
+        opacity: 0;
+        animation: active-btn-bar02 .8s forwards;
+    }
+
+    @keyframes active-btn-bar02 {
+        100% {
+            height: 0;
+        }
+    }
+
+    #btn.active span:nth-of-type(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+
+    /* キービジュアル */
+    .keyvisual {
+        z-index: 0;
+        width: 100%;
+    }
+
+    .img {
+        background-size: contain;
+    }
+
+    .keyvisual01 {
+        background-position: 55% center;
+    }
+
+    .keyvisual02 {
+        background-position: 35% center;
+    }
+
+    .keyvisual03 {
+        background-position: 70% center;
+    }
+
+    .keyvisual04 {
+        background-position: 20% center;
+    }
+
+
+    /* グローバルナビゲーション */
+    .nav {
+        display: none;
+        /* 最初は非表示 */
+        position: fixed;
+        top: 2%;
+        /* ヘッダーの下から */
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #fdf8ef;
+        overflow-y: scroll;
+
+    }
+
+    .nav.active {
+        display: block;
+        /* ハンバーガー押したら表示 */
+
+    }
+
+    .nav li {
+        border-bottom: 1px solid #f1ed5f;
+
+    }
+
+    .nav li a {
+        display: block;
+        padding: 10px;
+        color: #474747;
+    }
+
+
+    /* ピックアップ */
+    .pickup_container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .pickup_container article {
+        margin-bottom: 40px;
+    }
+
+    .pickup_bg {
+        width: 100%;
+    }
+
+
+    /* おすすめ記事 */
+    .best_library_container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .best_library_container article {
+        text-align: center;
+    }
+
+    .best_library_container img {
+        width: 90%;
+        height: 90%;
+    }
+
+    /* 記事を覗いている犬の画像なし */
+    .pickup_dog img,
+    .best_library_dog img {
+        display: none;
+    }
+
+
+    /* トップへ戻るボタン */
+    .top_button a {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .top_button img {
+        width: 40%;
+        height: 40%;
+        margin: 12px auto 0;
+
+    }
+
+
+    /* SNS情報 */
+    .sns_container {
+        flex-direction: column;
+    }
+
+    .sns_container img {
+        width: 90%;
+        height: 90%;
+        margin: 0 auto 20px;
+        text-align: center;
+        display: block;
+    }
+
+
+    /* お知らせ */
+    .news_container dt {
+        line-height: 3;
+    }
+
+    .news_container dd {
+        line-height: 2;
+    }
+
+    .news_container dt {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+
+    .news_container {
+        height: 350px;
+    }
+
+    .news_event_container dd,
+    .news_goods_container dd,
+    .news_appreciate_container dd {
+        margin: 0 0 30px;
+        padding: 0;
+    }
+
+
+    .news_button:link,
+    .new_button:visited {
+        display: block;
+        margin: 10px auto 100px;
+    }
+
+
+    /* トップの走る犬サイズ */
+    .run_dog {
+        width: 50%;
+        height: 50%;
+    }
+
+    /* フッター */
+    .footer_container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 30px;
+
+    }
+
+    .footer_item li {
+        display: none;
+    }
+
+    /* フッター内SNSアイコン */
+    .mobile_sns_container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    .mobile_sns_item li img {
+        width: 40%;
+        height: 40%;
+    }
+
+    .mobile_sns_item a:hover {
+        opacity: 0.5;
+        border: none;
+    }
+
+
+
+    /* 短頭種の仲間たち */
+    .dog_breed_list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dog_breed_list li {
+        margin-right: 0;
+        margin-left: 50px;
+    }
+
+    .dog_breed h3 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dog_breed_container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dog_breed_container img {
+        width: 70%;
+    }
+
+    /* お役立ち情報 */
+
+    .library h3 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .library ul {
+        flex-direction: column;
+    }
+
+    .library_container {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+
+    .library_container img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .library_container dt {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .library_container dd {
+        margin-left: 0;
+    }
+
+    /* イベント */
+
+    .event h3 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .event ul {
+        flex-direction: column;
+    }
+
+    .event li {
+        margin-right: 0;
+    }
+
+
+    .event_container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+
+    /* イベント各記事 */
+
+    .event_article,
+    .event_article iframe {
+        width: 100%;
+    }
+
+    .entry_button_dog img {
+        position: absolute;
+        left: 40%;
+    }
+
+    .past_photo,
+    .mrmakino_photo {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .past_photo div,
+    .mrmakino_photo {
+        text-align: center;
+    }
+
+    /* お知らせ一覧*/
+
+    .newslist {
+        height: 100%;
+    }
+
+    /* フォトギャラリー */
+
+    .photo_gallery {
+        width: 100%;
+    }
+
+    .photo_gallery_photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 0 15px;
+    }
+
+
+    /* 保護活動 */
+    .booboo_rescue h3,
+    .support_goods h3 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .booboo_rescue,
+    .support_goods {
+        width: 100%;
+    }
+
+    .booboo_rescue ul,
+    .booboo_rescue_discription {
+        flex-direction: column;
+    }
+
+
+
+    .booboo_rescue_discription img {
+        width: 100%;
+
+    }
+
+    .rescue_dogs_container {
+        justify-content: center;
+    }
+
+    .goods_item {
+        margin: 0 auto 50px;
+    }
+
+
+
+    .foster_parents_button a:link,
+    .foster_parents_button a:visited,
+    .order_button a:link,
+    .order_button a:visited {
+        margin: 20px auto 100px;
+    }
+
+    /* BooBooについて */
+
+    .about h3 {
+        font-size: 1.25rem;
+        font-weight: normal;
+        padding: 50% 0 0 5%;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        writing-mode: horizontal-tb;
+        color: #fff;
+
+    }
+
+    /* お問い合わせ */
+
+    .contact_form {
+        width: 100%;
+    }
+
+    .Inquiry_container {
+        flex-direction: column;
+    }
+
+    .contact_form textarea {
+        width: 100%;
+    }
+
+
+
+    /* 会社概要 */
+    .company,
+    .map iframe {
+        width: 100%;
+    }
+
+
+    /* 里親面談フォーム */
+
+    .foster_parents_form,
+    .foster_parents_form textarea {
+        width: 100%;
+    }
+
+    /* ご購入フォーム */
+    .order_form,
+    .order_form textarea {
+        width: 100%;
+    }
+
+    /* よくあるご質問 */
+    .qa p {
+        margin-left: 0;
+    }
+}
+
+
+@media(min-width: 801px) {
+
+    /* ハンバーガーメニュ非表示 */
+    .btn-trigger {
+        display: none;
+    }
+
+    /* ヘッダーSNSリスト非表示 */
+    .mobile_sns_item {
+        display: none;
+    }
+}
